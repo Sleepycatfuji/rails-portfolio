@@ -1,2 +1,2 @@
-class Hobby < ApplicationRecord
+class Resume < ApplicationRecord
 end
