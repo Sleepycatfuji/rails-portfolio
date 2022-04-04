@@ -118,8 +118,8 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   ActionMailer::Base.smtp_settings = {
-    port: ENV['587'],
-    address: ENV['smtp.mailgun.org'],
+    port: ENV['MAILGUN_SMTP_PORT'],
+    address: ENV['MAILGUN_SMTP_SERVER'],
     user_name: ENV['MAILGUN_SMTP_LOGIN'],
     password: ENV['MAILGUN_SMTP_PASSWORD'],
     domain: 'https://railsprofile.herokuapp.com/', # UPDATE THIS VALUE WITH YOUR OWN APP
