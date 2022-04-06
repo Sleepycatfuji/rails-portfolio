@@ -1,6 +1,9 @@
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
+  # Prepare the ingress controller used to receive mail
+  # config.action_mailbox.ingress = :relay
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -118,12 +121,11 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   ActionMailer::Base.smtp_settings = {
-    authuntication: plain,
-    address: ENV['MAIL_PROVIDER_ADDRESS'],
-    port: ENV['MAIL_PROVIDER_PORT'],
+    address: 'smtp.mailgun.org',
+    port: '587',
     user_name: ENV['MAIL_PROVIDER_USERNAME'],
     password: ENV['MAIL_PROVIDER_PASSWORD'],
-    domain: 'https://kimprofile.herokuapp.com/', # UPDATE THIS VALUE WITH YOUR OWN APP
+    domain: 'https://kim-rails-portfolio.herokuapp.com',
     authentication: :plain
   }
   ActionMailer::Base.delivery_method = :smtp
