@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I made this portfolio website using Ruby on Rails and Active Storage.
 
-Things you may want to cover:
+I used some bootstrap and mailhooks to make the contact form.
 
-* Ruby version
+Cloudinary to store pictures.
 
-* System dependencies
+Deployed using Heroku.
 
-* Configuration
+Bought the domain on namecheap.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Thank you LeWagon ❤️ for banner and footer templates.
